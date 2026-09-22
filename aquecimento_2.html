@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+
+<body style="width: 600px; margin: auto; margin-bottom:3em">
+</body>
+<style>
+  h3 {
+    text-align: center;
+  }
+</style>
+
+<h3> ── ⋆⋅Pegue a moeda! ⋅⋆ ──</h3>
+
+<img class="meio" src="img/gifMoeda.gif" id="gif" alt="Moeda sendo lançada">
+
+<div style="width: fit-content; margin: auto; margin-top: 2em; margin-bottom: 2em">
+
+<input type="button" value="Pegue 🫴" onClick="moedaAleatória()">
+
+<input type="button" value="Jogue novamente 🫰" onMouseMove="resetaMoeda()">
+
+</div>
+
+<hr>
+
+<input type="button" value="Gerar 8 bits honestos (confia 😎)" onClick="bytesAleatórios()">
+<input type="text" id="bytes">
+
+<br><br>
+<hr>
+
+<div style="width: fit-content; margin: auto; margin-top: 2em">
+<input type="button" value="Gerar 1 milhão de bytes" onClick="contadorDeBytes()">
+</div>
+
+<br><br>Desses um milhão de bytes, essa é a quantidade gerada que coincide com a representação dos nucleotídeos 🧬:
+<br><br>A = <input type="text" id="quantA">
+<br>C = <input type="text" id="quantC">
+<br>G = <input type="text" id="quantG">
+<br>T = <input type="text" id="quantT">
+
+
+<br><br>
+
+<hr>
+
+<br><br>
+
+<input type="button" value="Gerar pontos" onClick="vetorRaio()"> (<span id="valorX"></span>, <span id="valorY"></span>) |r&#x20D7| = </span> <span id="valorR"> </span>
+
+<br><br><br>
+
+<p class="fim">
+⋆｡‧˚ʚ🍓 FIM ɞ˚‧｡⋆ 𐔌՞. .՞𐦯
+</p>
+
+<!-- FIM DO HTML, INÍCIO DO SCRIPT -->
+
+
+<script>
+
+
+function moedaAleatória() {
+
+	let moeda;
+	
+	if (Math.random()<=0.5) {
+		moeda = "Cara";
+		document.getElementById("gif").src = "img/gifCara.png"
+	}
+	
+	else {
+		moeda = "Coroa";
+		document.getElementById("gif").src = "img/gifCoroa.png"
+	}
+	
+return moeda	
+	
+}
+
+function resetaMoeda() {
+	document.getElementById("gif").src = "img/gifMoeda.gif"
+}
+
+function bytesAleatórios() {
+
+	let byte = "";
+	let valor = "";
+	
+	for (let i=0; i<8; i++) {
+		if (Math.random()<=0.5) {
+		valor = "0";
+	}
+		else {
+			valor = "1";
+			}
+		byte += valor;
+	}
+	
+	document.getElementById("bytes").value = byte
+	return byte;
+}
+
+function contadorDeBytes() {
+
+	const A = "01000001";
+	const C = "01000011";
+	const G = "01000111";
+	const T = "01010100";
+	
+	let quantA = 0;
+	let quantC = 0;
+	let quantG = 0;
+	let quantT = 0;
+	
+	for (let n=0; n<1000000; n++) {
+		let byte = "";
+		for (let i=0; i<8; i++) {
+			let valor; 
+			if (Math.random()<=0.5) {
+				valor = "0";
+		}
+			else {
+				valor = "1";
+				}
+			byte += valor;
+		}
+		if (byte == A) 
+			quantA += 1;
+		else if (byte == C) 
+			quantC += 1;
+		else if (byte == G) 
+			quantG += 1;
+		else if (byte == T) 
+			quantT += 1;	
+	}
+		
+	console.log(quantA, quantC, quantG, quantT)
+	document.getElementById("quantA").value = quantA
+	document.getElementById("quantC").value = quantC
+	document.getElementById("quantG").value = quantG
+	document.getElementById("quantT").value = quantT
+	document.getElementById("bytes").value = byte
+	return {quantA, quantC, quantG, quantT}
+}
+	
+function vetorRaio() {
+	
+	let x = -1 + 2*Math.random()
+	let y = -1 + 2*Math.random()
+	let r = Math.sqrt(x**2 + y**2)
+	
+	
+	document.getElementById("valorX").innerHTML = x.toFixed(2)
+	document.getElementById("valorY").innerHTML = y.toFixed(2)
+	document.getElementById("valorR").innerHTML = r.toFixed(2)
+
+}
+
+</script>
+
+
+<!-- FIRULA -->
+
+<style>
+	.fim {
+	  text-align: end
+	}
+</style>
+
+<style>
+	.meio {
+		display: block;
+		margin-inline: auto;
+		max-width: 100%	
+	}
+</style>
+
+</html>
+
