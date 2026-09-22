@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<style>
+		.tipo1 {
+			border: 3px double DarkSeaGreen;
+			background-color: rgb(100,255,100);
+			width: fit-content;
+			margin: auto;
+		}
+		/* td {border: 1px solid black}
+	</style>
+
+</head>
+
+Valor de n: <input type="text" id="nlin"><br>
+<input type="button" value="Gerar Triângulo" onClick="gerarPascal()">
+
+<body>
+
+</body>
+<div id="tabela">
+
+</div>
+
+<script>
+
+function gerarPascal() {
+	document.getElementById("tabela").innerHTML = "";
+	let n = document.getElementById("nlin").value
+	let k = n + 1;
+	
+	let triPascal = [];
+	for (let i=0; i<n; i++) {
+		triPascal[i] = [];
+		for (let j=0; j<(i+1)+2; j++) {
+			triPascal[i][j] = 0;
+		}
+	}
+
+	triPascal[0][1] = 1
+
+
+	for (let i=1; i<n; i++) {
+		for (let j=1; j<(i+1)+1; j++) {
+			triPascal[i][j] = triPascal[i-1][j-1] + triPascal[i-1][j];
+		}
+	}
+
+	let tabela = document.createElement("table");
+	tabela.style.textAlign = "center";
+	document.getElementById("tabela").appendChild(tabela);
+	for (let i=0; i<n; i++){ //linhas da tabela
+		let linha = document.createElement("tr");
+		tabela.appendChild(linha);
+		for (let j=0; j<(n*2)-1; j++) { //colunas da tabela
+		let celula = document.createElement("td");
+		linha.appendChild(celula);
+		celula.id = i + "_" + j
+		celula.style.width = "2em";
+		celula.innerHTML = "&nbsp;";
+		}
+	}
+
+	for (let i=0; i<n; i++) {
+		for (let j=0+1; j<(triPascal[i].length)-1; j++) {
+			let itab = i;
+			let jtab = (n-1) + 2*(j-1) - i
+			document.getElementById(itab+"_"+jtab).innerHTML = triPascal[i][j];
+			}
+		}
+}
+
+
+</script>
+
+
+</html>
