@@ -1,0 +1,14 @@
+@page {
+  size: A4;
+  margin: 0
+}
+
+
+body {
+  width: 600px;
+  margin: auto;
+  background-colour: #E7DECB;
+  margin-bottom:3em;
+  margin-top:2em;
+  font-family: '';
+}
