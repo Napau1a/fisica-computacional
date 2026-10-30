@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+body {
+    background-color: #DEC892;
+    background-image: url("https://transparenttextures.com/patterns/light-paper-fibers.png");
+    background-repeat: repeat;
+    background-size: 500px;
+    font-family: "Outfit", sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.folha {
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 3em;    
+    color: #3E2928;
+}
+
+.cabecalho {
+    padding: 20px;
+    text-align: center;
+    color: #3E2928;
+    font-family: "Fraunces", serif;
+    font-size: 1.2rem;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    border: none;
+    border-bottom: 3px solid #3E2928;
+    border-radius: 0px;
+    width: 550px;
+    margin: auto;
+    margin-bottom: 2rem;
+    line-height: 0;
+}
+
+.cabecalho table, 
+.cabecalho td, 
+.cabecalho th {
+    border: none;
+    padding: 0;
+    background-color: transparent;
+}
+
+.cabecalho table {
+    margin: 0;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cabecalho td {
+    font-family: "Fraunces", serif;
+    text-align: center;
+    vertical-align: middle;
+    padding: 8px;
+}
+
+.cabecalho__logo {
+    height: 6rem;
+    width: auto;
+}
+
+h1 {
+    text-align: center;
+    color: #2C4A52;
+    font-family: "Fraunces", serif;
+    font-size: 1.2rem;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+    
+h2 {
+    text-align: left;
+    color: #2C4A52;
+    font-family: "Fraunces", serif;
+    font-size: 1.2rem;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    border: none;
+    border-bottom: 2px dashed #2C4A52;
+    border-radius: 0px;
+}
+
+table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+    
+th {
+    color: #415f33;
+    font-family: "Fraunces", serif;
+    font-weight: 600;
+    font-style: normal;
+    border: 3px solid #415f33;
+    padding: 5px;
+    background-color: rgba(77, 139, 49, 0.2);
+}
+
+td {
+    text-align: center;
+    vertical-align: middle;
+    font-family: "Outfit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    border: 2px solid #415f33;
+    padding: 5px;
+}
+
+p {
+    text-align: justify;
+    text-indent: 2em;
+    margin-bottom: 1.5px;
+}
+    
+ol li::marker {
+    color: #F24C00;
+    font-weight: bold;
+}
+
+.fonteABNT {
+    text-align: center;
+    font-weight: 300;
+    font-size: 0.7rem;
+}
