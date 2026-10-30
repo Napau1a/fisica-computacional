@@ -8,6 +8,10 @@ body {
     background-size: 500px;
     font-family: "Outfit", sans-serif;
     font-size: 1.1rem;
+    text-align: justify;
+    color: #3E2928;
+    font-weight: 400;
+    font-style: normal;
     line-height: 1.6;
 }
 
