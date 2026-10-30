@@ -127,3 +127,19 @@ ol li::marker {
     font-weight: 300;
     font-size: 0.7rem;
 }
+
+.botao {
+    font-family: "Fraunces", serif;
+    font-weight: 600;
+    color: #DEC892;
+    background-color: #415f33;
+    border: 2px solid #415f33;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.botao-carimbo:hover {
+    background-color: #F24C00;
+    color: #DEC892;
+}
