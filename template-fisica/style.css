@@ -174,7 +174,20 @@ ol li::marker {
     cursor: pointer;
     transition: 0.2s;
 }
-.botao-carimbo:hover {
+.botao:hover {
     background-color: #F24C00;
     color: #DEC892;
+}
+.input {
+    font-family: "Fraunces", serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #3E2928;
+    background-color: #fcf7e8;
+    border: 2px solid #415f33;
+    border-radius: 4px;
+    padding: 8px 16px;
+    box-sizing: border-box; 
+    outline: none;
+    transition: 0.2s;
 }
