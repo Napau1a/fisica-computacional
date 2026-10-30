@@ -1,0 +1,17 @@
+Como aplicar no html?
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://napau1a.github.io/fisica-computacional/template-fisica/style.css">
+</head>
+<body>
+
+    <div class="folha">
+       
+    </div>
+
+    <script src="https://napau1a.github.io/fisica-computacional/template-fisica/script.js"></script>
+</body>
+</html>
