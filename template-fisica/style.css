@@ -179,7 +179,7 @@ ol li::marker {
     color: #DEC892;
 }
 
-.input[type="text"] {
+input[type="text"] {
     width: 120px;
     font-family: "Fraunces", serif;
     font-weight: 400;
